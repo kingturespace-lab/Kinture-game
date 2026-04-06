@@ -4715,17 +4715,20 @@
             </button>
             
             <!-- 網頁遊戲按鈕 -->
-            <!-- <button class="side-btn game-btn" onclick="openGame()" title="線上遊戲">
+            <a href="https://nar198637z-dotcom.github.io/Kinture-game0/" 
+            target="_blank" 
+            class="side-btn game-btn" 
+            title="線上試玩">
                 <span class="icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
                         <polyline points="17 2 12 7 7 2"></polyline>
                     </svg>
                 </span>
-                <span class="btn-text lang-content active" data-lang="zh">遊戲</span>
-                <span class="btn-text lang-content" data-lang="en">Play</span>
-                <span class="btn-text lang-content" data-lang="ja">ゲーム</span>
-            </button> -->
+                <span class="btn-text lang-content active" data-lang="zh">試玩</span>
+                <span class="btn-text lang-content" data-lang="en">Demo</span>
+                <span class="btn-text lang-content" data-lang="ja">体験版</span>
+            </a>
             
             <!-- 外部連結 1 - 購買連結 -->
             <!-- <a href="https://your-shop-link.com" target="_blank" class="side-btn shop-btn" title="購買">
@@ -4844,8 +4847,9 @@
         </div>
 
 <!-- 遊戲視窗彈窗 -->
+<!-- 遊戲視窗彈窗（簡化版） -->
 <div id="gameModal" class="modal">
-    <div class="modal-content game-modal" style="max-width: 1400px;">
+    <div class="modal-content" style="max-width: 650px;">
         <span class="close" onclick="closeGame()">&times;</span>
         
         <div class="modal-header">
@@ -4856,11 +4860,91 @@
                 </svg>
             </div>
             <h2>
-                <span class="lang-content active" data-lang="zh">線上測試版"開發中"</span>
-                <span class="lang-content" data-lang="en">Online Test Version - Currently Under Development</span>
-                <span class="lang-content" data-lang="ja">オンラインテスト版 - 現在開発中</span>
+                <span class="lang-content active" data-lang="zh">🎮 線上試玩版</span>
+                <span class="lang-content" data-lang="en">🎮 Online Demo</span>
+                <span class="lang-content" data-lang="ja">🎮 オンライン体験版</span>
             </h2>
         </div>
+
+        <div style="padding: 40px; text-align: center;">
+            
+            <!-- 歡迎文字 -->
+            <div style="font-size: 64px; margin-bottom: 20px;">🌟</div>
+            
+            <h3 style="color: var(--primary-color); margin-bottom: 20px; font-size: 1.6em;">
+                <span class="lang-content active" data-lang="zh">體驗 KINTURE 勤能轉運的魅力！</span>
+                <span class="lang-content" data-lang="en">Experience the Magic of KINTURE!</span>
+                <span class="lang-content" data-lang="ja">KINTUREの魅力を体験しよう！</span>
+            </h3>
+            
+            <!-- 說明區塊 -->
+            <div class="alert alert-info" style="text-align: left; margin-bottom: 30px; border-radius: 15px;">
+                <strong>
+                    <span class="lang-content active" data-lang="zh">🎯 試玩版特色</span>
+                    <span class="lang-content" data-lang="en">🎯 Demo Features</span>
+                    <span class="lang-content" data-lang="ja">🎯 体験版の特徴</span>
+                </strong>
+                <ul style="margin-top: 12px; margin-bottom: 0; line-height: 1.8;">
+                    <li>
+                        <span class="lang-content active" data-lang="zh">完整遊戲流程：與AI對戰，體驗卡牌效果與事件線觸發</span>
+                        <span class="lang-content" data-lang="en">Full game experience: Battle AI and learn card effects & event triggers</span>
+                        <span class="lang-content" data-lang="ja">完全なゲーム体験：AIと対戦し、カード効果とイベント発動を学習</span>
+                    </li>
+                    <li>
+                        <span class="lang-content active" data-lang="zh">單機版本：無需註冊，瀏覽器直接遊玩</span>
+                        <span class="lang-content" data-lang="en">Standalone version: No registration required, play directly in browser</span>
+                        <span class="lang-content" data-lang="ja">スタンドアロン版：登録不要、ブラウザで直接プレイ</span>
+                    </li>
+                    <li>
+                        <span class="lang-content active" data-lang="zh">適合新手：熟悉規則後再購買實體版</span>
+                        <span class="lang-content" data-lang="en">Beginner-friendly: Learn the rules before buying the physical version</span>
+                        <span class="lang-content" data-lang="ja">初心者向け：ルールを覚えてから実物版を購入</span>
+                    </li>
+                    <li>
+                        <span class="lang-content active" data-lang="zh">持續更新：遊戲內容不斷優化中</span>
+                        <span class="lang-content" data-lang="en">Regular updates: Game content continuously being improved</span>
+                        <span class="lang-content" data-lang="ja">定期更新：ゲームコンテンツを継続的に改善中</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 前往按鈕 -->
+            <a href="https://nar198637z-dotcom.github.io/Kinture-game0/" 
+               target="_blank"
+               onclick="closeGame()"
+               style="
+                   display: inline-block;
+                   padding: 18px 45px;
+                   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                   color: white;
+                   text-decoration: none;
+                   border-radius: 35px;
+                   font-size: 1.3em;
+                   font-weight: 700;
+                   box-shadow: 0 8px 25px rgba(102,126,234,0.4);
+                   transition: all 0.3s;
+                   margin: 10px 0;
+               "
+               onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 15px 35px rgba(102,126,234,0.6)'"
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(102,126,234,0.4)'">
+                🚀
+                <span class="lang-content active" data-lang="zh">立即開始試玩</span>
+                <span class="lang-content" data-lang="en">Start Playing Now</span>
+                <span class="lang-content" data-lang="ja">今すぐプレイ開始</span>
+                ↗
+            </a>
+
+            <!-- 提示文字 -->
+            <p style="margin-top: 20px; color: var(--text-tertiary); font-size: 14px;">
+                <span class="lang-content active" data-lang="zh">💡 建議使用電腦瀏覽器以獲得最佳體驗 | 將在新分頁開啟</span>
+                <span class="lang-content" data-lang="en">💡 Best experienced on desktop browser | Opens in new tab</span>
+                <span class="lang-content" data-lang="ja">💡 PCブラウザでの体験を推奨 | 新しいタブで開きます</span>
+            </p>
+
+        </div>
+    </div>
+</div>
+
 
         <!-- 遊戲選擇畫面 -->
         <div id="gameMenu" class="game-modes">
@@ -5618,8 +5702,7 @@
         function closeGame() {
             document.getElementById('gameModal').classList.remove('show');
             document.body.style.overflow = 'auto';
-            backToLobby();
-        }
+        }       
 
         function loadGame(mode) {
             const gameContainer = document.getElementById('gameContainer');
@@ -5837,474 +5920,474 @@
             }
         });
         // ========== 排7遊戲系統 ==========
-let sevensGame = {
-    players: [],
-    deck: [],
-    table: {
-        spades: [],
-        hearts: [],
-        clubs: [],
-        diamonds: []
-    },
-    currentPlayerIndex: 0,
-    turnCount: 0,
-    gameStarted: false,
-    playerCount: 4
-};
+// let sevensGame = {
+//     players: [],
+//     deck: [],
+//     table: {
+//         spades: [],
+//         hearts: [],
+//         clubs: [],
+//         diamonds: []
+//     },
+//     currentPlayerIndex: 0,
+//     turnCount: 0,
+//     gameStarted: false,
+//     playerCount: 4
+// };
 
-// 花色映射
-const SUITS = {
-    spades: { name: '♠', color: 'black', display: '♠️' },
-    hearts: { name: '♥', color: 'red', display: '♥️' },
-    clubs: { name: '♣', color: 'black', display: '♣️' },
-    diamonds: { name: '♦', color: 'red', display: '♦️' }
-};
+// // 花色映射
+// const SUITS = {
+//     spades: { name: '♠', color: 'black', display: '♠️' },
+//     hearts: { name: '♥', color: 'red', display: '♥️' },
+//     clubs: { name: '♣', color: 'black', display: '♣️' },
+//     diamonds: { name: '♦', color: 'red', display: '♦️' }
+// };
 
-const SUIT_NAMES = {
-    zh: { spades: '黑桃', hearts: '紅心', clubs: '梅花', diamonds: '方塊' },
-    en: { spades: 'Spades', hearts: 'Hearts', clubs: 'Clubs', diamonds: 'Diamonds' },
-    ja: { spades: 'スペード', hearts: 'ハート', clubs: 'クラブ', diamonds: 'ダイヤ' }
-};
+// const SUIT_NAMES = {
+//     zh: { spades: '黑桃', hearts: '紅心', clubs: '梅花', diamonds: '方塊' },
+//     en: { spades: 'Spades', hearts: 'Hearts', clubs: 'Clubs', diamonds: 'Diamonds' },
+//     ja: { spades: 'スペード', hearts: 'ハート', clubs: 'クラブ', diamonds: 'ダイヤ' }
+// };
 
-// 數字映射
-const RANK_DISPLAY = {
-    1: 'A', 11: 'J', 12: 'Q', 13: 'K'
-};
+// // 數字映射
+// const RANK_DISPLAY = {
+//     1: 'A', 11: 'J', 12: 'Q', 13: 'K'
+// };
 
-// 開始排7遊戲
-function startSevensGame(playerCount) {
-    sevensGame.playerCount = playerCount;
+// // 開始排7遊戲
+// function startSevensGame(playerCount) {
+//     sevensGame.playerCount = playerCount;
     
-    // 隱藏選單，顯示遊戲
-    document.getElementById('gameMenu').style.display = 'none';
-    document.getElementById('sevensGame').style.display = 'block';
+//     // 隱藏選單，顯示遊戲
+//     document.getElementById('gameMenu').style.display = 'none';
+//     document.getElementById('sevensGame').style.display = 'block';
     
-    // 初始化遊戲
-    initializeSevensGame();
-}
+//     // 初始化遊戲
+//     initializeSevensGame();
+// }
 
-// 初始化遊戲
-function initializeSevensGame() {
-    // 創建玩家
-    sevensGame.players = [];
+// // 初始化遊戲
+// function initializeSevensGame() {
+//     // 創建玩家
+//     sevensGame.players = [];
     
-    // 人類玩家
-    const humanPlayer = {
-        id: 0,
-        name: currentUser ? currentUser.username : (currentLanguage === 'zh' ? '你' : currentLanguage === 'en' ? 'You' : 'あなた'),
-        isHuman: true,
-        hand: [],
-        avatar: currentUser ? currentUser.avatar : 'Y'
-    };
-    sevensGame.players.push(humanPlayer);
+//     // 人類玩家
+//     const humanPlayer = {
+//         id: 0,
+//         name: currentUser ? currentUser.username : (currentLanguage === 'zh' ? '你' : currentLanguage === 'en' ? 'You' : 'あなた'),
+//         isHuman: true,
+//         hand: [],
+//         avatar: currentUser ? currentUser.avatar : 'Y'
+//     };
+//     sevensGame.players.push(humanPlayer);
     
-    // 電腦玩家
-    const cpuNames = ['Alice', 'Bob', 'Charlie', 'David'];
-    for (let i = 1; i < sevensGame.playerCount; i++) {
-        sevensGame.players.push({
-            id: i,
-            name: `CPU ${i}`,
-            displayName: cpuNames[i - 1],
-            isHuman: false,
-            hand: [],
-            avatar: cpuNames[i - 1].charAt(0)
-        });
-    }
+//     // 電腦玩家
+//     const cpuNames = ['Alice', 'Bob', 'Charlie', 'David'];
+//     for (let i = 1; i < sevensGame.playerCount; i++) {
+//         sevensGame.players.push({
+//             id: i,
+//             name: `CPU ${i}`,
+//             displayName: cpuNames[i - 1],
+//             isHuman: false,
+//             hand: [],
+//             avatar: cpuNames[i - 1].charAt(0)
+//         });
+//     }
     
-    // 創建並洗牌
-    createDeck();
-    shuffleDeck();
-    dealCards();
+//     // 創建並洗牌
+//     createDeck();
+//     shuffleDeck();
+//     dealCards();
     
-    // 初始化牌桌
-    sevensGame.table = {
-        spades: [],
-        hearts: [],
-        clubs: [],
-        diamonds: []
-    };
+//     // 初始化牌桌
+//     sevensGame.table = {
+//         spades: [],
+//         hearts: [],
+//         clubs: [],
+//         diamonds: []
+//     };
     
-    // 找出誰有梅花7
-    findFirstPlayer();
+//     // 找出誰有梅花7
+//     findFirstPlayer();
     
-    // 渲染遊戲畫面
-    renderGame();
+//     // 渲染遊戲畫面
+//     renderGame();
     
-    sevensGame.gameStarted = true;
-    sevensGame.turnCount = 1;
+//     sevensGame.gameStarted = true;
+//     sevensGame.turnCount = 1;
     
-    // 如果第一個玩家是電腦，執行電腦回合
-    if (!sevensGame.players[sevensGame.currentPlayerIndex].isHuman) {
-        setTimeout(() => cpuTurn(), 1000);
-    }
-}
+//     // 如果第一個玩家是電腦，執行電腦回合
+//     if (!sevensGame.players[sevensGame.currentPlayerIndex].isHuman) {
+//         setTimeout(() => cpuTurn(), 1000);
+//     }
+// }
 
-// 創建牌組
-function createDeck() {
-    sevensGame.deck = [];
-    const suits = ['spades', 'hearts', 'clubs', 'diamonds'];
+// // 創建牌組
+// function createDeck() {
+//     sevensGame.deck = [];
+//     const suits = ['spades', 'hearts', 'clubs', 'diamonds'];
     
-    for (let suit of suits) {
-        for (let rank = 1; rank <= 13; rank++) {
-            sevensGame.deck.push({
-                suit: suit,
-                rank: rank,
-                id: `${suit}-${rank}`
-            });
-        }
-    }
-}
+//     for (let suit of suits) {
+//         for (let rank = 1; rank <= 13; rank++) {
+//             sevensGame.deck.push({
+//                 suit: suit,
+//                 rank: rank,
+//                 id: `${suit}-${rank}`
+//             });
+//         }
+//     }
+// }
 
-// 洗牌
-function shuffleDeck() {
-    for (let i = sevensGame.deck.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [sevensGame.deck[i], sevensGame.deck[j]] = [sevensGame.deck[j], sevensGame.deck[i]];
-    }
-}
+// // 洗牌
+// function shuffleDeck() {
+//     for (let i = sevensGame.deck.length - 1; i > 0; i--) {
+//         const j = Math.floor(Math.random() * (i + 1));
+//         [sevensGame.deck[i], sevensGame.deck[j]] = [sevensGame.deck[j], sevensGame.deck[i]];
+//     }
+// }
 
-// 發牌
-function dealCards() {
-    const cardsPerPlayer = Math.floor(52 / sevensGame.playerCount);
+// // 發牌
+// function dealCards() {
+//     const cardsPerPlayer = Math.floor(52 / sevensGame.playerCount);
     
-    for (let i = 0; i < sevensGame.players.length; i++) {
-        sevensGame.players[i].hand = sevensGame.deck.slice(
-            i * cardsPerPlayer,
-            (i + 1) * cardsPerPlayer
-        );
+//     for (let i = 0; i < sevensGame.players.length; i++) {
+//         sevensGame.players[i].hand = sevensGame.deck.slice(
+//             i * cardsPerPlayer,
+//             (i + 1) * cardsPerPlayer
+//         );
         
-        // 排序手牌
-        sortHand(sevensGame.players[i].hand);
-    }
-}
+//         // 排序手牌
+//         sortHand(sevensGame.players[i].hand);
+//     }
+// }
 
-// 排序手牌
-function sortHand(hand) {
-    const suitOrder = { clubs: 0, diamonds: 1, hearts: 2, spades: 3 };
-    hand.sort((a, b) => {
-        if (suitOrder[a.suit] !== suitOrder[b.suit]) {
-            return suitOrder[a.suit] - suitOrder[b.suit];
-        }
-        return a.rank - b.rank;
-    });
-}
+// // 排序手牌
+// function sortHand(hand) {
+//     const suitOrder = { clubs: 0, diamonds: 1, hearts: 2, spades: 3 };
+//     hand.sort((a, b) => {
+//         if (suitOrder[a.suit] !== suitOrder[b.suit]) {
+//             return suitOrder[a.suit] - suitOrder[b.suit];
+//         }
+//         return a.rank - b.rank;
+//     });
+// }
 
-// 找出第一個玩家（擁有梅花7）
-function findFirstPlayer() {
-    for (let i = 0; i < sevensGame.players.length; i++) {
-        const hasClubs7 = sevensGame.players[i].hand.some(
-            card => card.suit === 'clubs' && card.rank === 7
-        );
+// // 找出第一個玩家（擁有梅花7）
+// function findFirstPlayer() {
+//     for (let i = 0; i < sevensGame.players.length; i++) {
+//         const hasClubs7 = sevensGame.players[i].hand.some(
+//             card => card.suit === 'clubs' && card.rank === 7
+//         );
         
-        if (hasClubs7) {
-            sevensGame.currentPlayerIndex = i;
-            break;
-        }
-    }
-}
+//         if (hasClubs7) {
+//             sevensGame.currentPlayerIndex = i;
+//             break;
+//         }
+//     }
+// }
 
-// 渲染遊戲畫面
-function renderGame() {
-    renderPlayers();
-    renderTable();
-    renderPlayerHand();
-    updateGameInfo();
-}
+// // 渲染遊戲畫面
+// function renderGame() {
+//     renderPlayers();
+//     renderTable();
+//     renderPlayerHand();
+//     updateGameInfo();
+// }
 
-// 渲染玩家面板
-function renderPlayers() {
-    const container = document.getElementById('playersArea');
-    container.innerHTML = '';
+// // 渲染玩家面板
+// function renderPlayers() {
+//     const container = document.getElementById('playersArea');
+//     container.innerHTML = '';
     
-    sevensGame.players.forEach((player, index) => {
-        const isActive = index === sevensGame.currentPlayerIndex;
-        const panel = document.createElement('div');
-        panel.className = `player-panel ${isActive ? 'active' : ''} ${player.hand.length === 0 ? 'winner' : ''}`;
-        panel.innerHTML = `
-            <div class="player-header">
-                <div class="player-avatar-small ${player.isHuman ? '' : 'cpu'}">
-                    ${player.avatar}
-                </div>
-                <div class="player-name">${player.isHuman ? player.name : player.displayName}</div>
-                <div class="player-cards-count">${player.hand.length}</div>
-            </div>
-            <div class="player-status">
-                ${player.hand.length === 0 ? 
-                    `<span class="lang-content ${currentLanguage === 'zh' ? 'active' : ''}" data-lang="zh">✓ 獲勝！</span>
-                     <span class="lang-content ${currentLanguage === 'en' ? 'active' : ''}" data-lang="en">✓ Winner!</span>
-                     <span class="lang-content ${currentLanguage === 'ja' ? 'active' : ''}" data-lang="ja">✓ 勝利！</span>` :
-                    isActive ? 
-                    `<span class="lang-content ${currentLanguage === 'zh' ? 'active' : ''}" data-lang="zh">${player.isHuman ? '你的回合' : '思考中...'}</span>
-                     <span class="lang-content ${currentLanguage === 'en' ? 'active' : ''}" data-lang="en">${player.isHuman ? 'Your Turn' : 'Thinking...'}</span>
-                     <span class="lang-content ${currentLanguage === 'ja' ? 'active' : ''}" data-lang="ja">${player.isHuman ? 'あなたのターン' : '考え中...'}</span>` :
-                    `<span class="lang-content ${currentLanguage === 'zh' ? 'active' : ''}" data-lang="zh">等待中</span>
-                     <span class="lang-content ${currentLanguage === 'en' ? 'active' : ''}" data-lang="en">Waiting</span>
-                     <span class="lang-content ${currentLanguage === 'ja' ? 'active' : ''}" data-lang="ja">待機中</span>`
-                }
-            </div>
-        `;
-        container.appendChild(panel);
-    });
-}
+//     sevensGame.players.forEach((player, index) => {
+//         const isActive = index === sevensGame.currentPlayerIndex;
+//         const panel = document.createElement('div');
+//         panel.className = `player-panel ${isActive ? 'active' : ''} ${player.hand.length === 0 ? 'winner' : ''}`;
+//         panel.innerHTML = `
+//             <div class="player-header">
+//                 <div class="player-avatar-small ${player.isHuman ? '' : 'cpu'}">
+//                     ${player.avatar}
+//                 </div>
+//                 <div class="player-name">${player.isHuman ? player.name : player.displayName}</div>
+//                 <div class="player-cards-count">${player.hand.length}</div>
+//             </div>
+//             <div class="player-status">
+//                 ${player.hand.length === 0 ? 
+//                     `<span class="lang-content ${currentLanguage === 'zh' ? 'active' : ''}" data-lang="zh">✓ 獲勝！</span>
+//                      <span class="lang-content ${currentLanguage === 'en' ? 'active' : ''}" data-lang="en">✓ Winner!</span>
+//                      <span class="lang-content ${currentLanguage === 'ja' ? 'active' : ''}" data-lang="ja">✓ 勝利！</span>` :
+//                     isActive ? 
+//                     `<span class="lang-content ${currentLanguage === 'zh' ? 'active' : ''}" data-lang="zh">${player.isHuman ? '你的回合' : '思考中...'}</span>
+//                      <span class="lang-content ${currentLanguage === 'en' ? 'active' : ''}" data-lang="en">${player.isHuman ? 'Your Turn' : 'Thinking...'}</span>
+//                      <span class="lang-content ${currentLanguage === 'ja' ? 'active' : ''}" data-lang="ja">${player.isHuman ? 'あなたのターン' : '考え中...'}</span>` :
+//                     `<span class="lang-content ${currentLanguage === 'zh' ? 'active' : ''}" data-lang="zh">等待中</span>
+//                      <span class="lang-content ${currentLanguage === 'en' ? 'active' : ''}" data-lang="en">Waiting</span>
+//                      <span class="lang-content ${currentLanguage === 'ja' ? 'active' : ''}" data-lang="ja">待機中</span>`
+//                 }
+//             </div>
+//         `;
+//         container.appendChild(panel);
+//     });
+// }
 
-// 渲染牌桌
-function renderTable() {
-    for (let suit in SUITS) {
-        const container = document.getElementById(suit);
-        container.innerHTML = '';
+// // 渲染牌桌
+// function renderTable() {
+//     for (let suit in SUITS) {
+//         const container = document.getElementById(suit);
+//         container.innerHTML = '';
         
-        sevensGame.table[suit].forEach(card => {
-            container.appendChild(createCardElement(card, false));
-        });
-    }
-}
+//         sevensGame.table[suit].forEach(card => {
+//             container.appendChild(createCardElement(card, false));
+//         });
+//     }
+// }
 
-// 渲染玩家手牌
-function renderPlayerHand() {
-    const container = document.getElementById('playerHand');
-    container.innerHTML = '';
+// // 渲染玩家手牌
+// function renderPlayerHand() {
+//     const container = document.getElementById('playerHand');
+//     container.innerHTML = '';
     
-    const humanPlayer = sevensGame.players[0];
-    const isMyTurn = sevensGame.currentPlayerIndex === 0;
+//     const humanPlayer = sevensGame.players[0];
+//     const isMyTurn = sevensGame.currentPlayerIndex === 0;
     
-    humanPlayer.hand.forEach(card => {
-        const canPlay = isMyTurn && isCardPlayable(card);
-        const cardElement = createCardElement(card, true, canPlay);
+//     humanPlayer.hand.forEach(card => {
+//         const canPlay = isMyTurn && isCardPlayable(card);
+//         const cardElement = createCardElement(card, true, canPlay);
         
-        if (canPlay) {
-            cardElement.onclick = () => playCard(card);
-        }
+//         if (canPlay) {
+//             cardElement.onclick = () => playCard(card);
+//         }
         
-        container.appendChild(cardElement);
-    });
+//         container.appendChild(cardElement);
+//     });
     
-    // 如果輪到玩家但沒有可出的牌，顯示Pass按鈕
-    if (isMyTurn && !hasPlayableCard(humanPlayer)) {
-        const passBtn = document.createElement('button');
-        passBtn.className = 'game-ctrl-btn ctrl-start';
-        passBtn.style.marginTop = '20px';
-        passBtn.innerHTML = `
-            <span class="lang-content ${currentLanguage === 'zh' ? 'active' : ''}" data-lang="zh">跳過 (Pass)</span>
-            <span class="lang-content ${currentLanguage === 'en' ? 'active' : ''}" data-lang="en">Pass</span>
-            <span class="lang-content ${currentLanguage === 'ja' ? 'active' : ''}" data-lang="ja">パス</span>
-        `;
-        passBtn.onclick = () => {
-            showGameMessage('⏭️', 
-                currentLanguage === 'zh' ? '跳過回合' : currentLanguage === 'en' ? 'Pass Turn' : 'ターンをパス',
-                currentLanguage === 'zh' ? '你沒有可出的牌' : currentLanguage === 'en' ? 'No playable cards' : 'プレイできるカードがありません'
-            );
-            nextTurn();
-        };
-        container.parentElement.appendChild(passBtn);
-    }
-}
+//     // 如果輪到玩家但沒有可出的牌，顯示Pass按鈕
+//     if (isMyTurn && !hasPlayableCard(humanPlayer)) {
+//         const passBtn = document.createElement('button');
+//         passBtn.className = 'game-ctrl-btn ctrl-start';
+//         passBtn.style.marginTop = '20px';
+//         passBtn.innerHTML = `
+//             <span class="lang-content ${currentLanguage === 'zh' ? 'active' : ''}" data-lang="zh">跳過 (Pass)</span>
+//             <span class="lang-content ${currentLanguage === 'en' ? 'active' : ''}" data-lang="en">Pass</span>
+//             <span class="lang-content ${currentLanguage === 'ja' ? 'active' : ''}" data-lang="ja">パス</span>
+//         `;
+//         passBtn.onclick = () => {
+//             showGameMessage('⏭️', 
+//                 currentLanguage === 'zh' ? '跳過回合' : currentLanguage === 'en' ? 'Pass Turn' : 'ターンをパス',
+//                 currentLanguage === 'zh' ? '你沒有可出的牌' : currentLanguage === 'en' ? 'No playable cards' : 'プレイできるカードがありません'
+//             );
+//             nextTurn();
+//         };
+//         container.parentElement.appendChild(passBtn);
+//     }
+// }
 
-// 創建卡牌元素
-function createCardElement(card, inHand = false, canPlay = false) {
-    const div = document.createElement('div');
-    div.className = `playing-card ${SUITS[card.suit].color} ${!canPlay && inHand ? 'disabled' : ''} ${canPlay ? 'highlight' : ''}`;
+// // 創建卡牌元素
+// function createCardElement(card, inHand = false, canPlay = false) {
+//     const div = document.createElement('div');
+//     div.className = `playing-card ${SUITS[card.suit].color} ${!canPlay && inHand ? 'disabled' : ''} ${canPlay ? 'highlight' : ''}`;
     
-    const rankDisplay = RANK_DISPLAY[card.rank] || card.rank;
+//     const rankDisplay = RANK_DISPLAY[card.rank] || card.rank;
     
-    div.innerHTML = `
-        <div class="card-number">${rankDisplay}</div>
-        <div class="card-suit">${SUITS[card.suit].name}</div>
-    `;
+//     div.innerHTML = `
+//         <div class="card-number">${rankDisplay}</div>
+//         <div class="card-suit">${SUITS[card.suit].name}</div>
+//     `;
     
-    return div;
-}
+//     return div;
+// }
 
-// 判斷卡牌是否可出
-function isCardPlayable(card) {
-    const suitCards = sevensGame.table[card.suit];
+// // 判斷卡牌是否可出
+// function isCardPlayable(card) {
+//     const suitCards = sevensGame.table[card.suit];
     
-    // 7 總是可以打出
-    if (card.rank === 7) {
-        return true;
-    }
+//     // 7 總是可以打出
+//     if (card.rank === 7) {
+//         return true;
+//     }
     
-    // 如果該花色還沒有7，不能出
-    if (!suitCards.some(c => c.rank === 7)) {
-        return false;
-    }
+//     // 如果該花色還沒有7，不能出
+//     if (!suitCards.some(c => c.rank === 7)) {
+//         return false;
+//     }
     
-    // 找出該花色已經出的最小和最大牌
-    const ranks = suitCards.map(c => c.rank).sort((a, b) => a - b);
-    const minRank = ranks[0];
-    const maxRank = ranks[ranks.length - 1];
+//     // 找出該花色已經出的最小和最大牌
+//     const ranks = suitCards.map(c => c.rank).sort((a, b) => a - b);
+//     const minRank = ranks[0];
+//     const maxRank = ranks[ranks.length - 1];
     
-    // 可以接在最小牌或最大牌的旁邊
-    return card.rank === minRank - 1 || card.rank === maxRank + 1;
-}
+//     // 可以接在最小牌或最大牌的旁邊
+//     return card.rank === minRank - 1 || card.rank === maxRank + 1;
+// }
 
-// 判斷玩家是否有可出的牌
-function hasPlayableCard(player) {
-    return player.hand.some(card => isCardPlayable(card));
-}
+// // 判斷玩家是否有可出的牌
+// function hasPlayableCard(player) {
+//     return player.hand.some(card => isCardPlayable(card));
+// }
 
-// 出牌
-function playCard(card) {
-    const humanPlayer = sevensGame.players[0];
+// // 出牌
+// function playCard(card) {
+//     const humanPlayer = sevensGame.players[0];
     
-    if (!isCardPlayable(card)) {
-        return;
-    }
+//     if (!isCardPlayable(card)) {
+//         return;
+//     }
     
-    // 從手牌移除
-    const cardIndex = humanPlayer.hand.findIndex(c => c.id === card.id);
-    humanPlayer.hand.splice(cardIndex, 1);
+//     // 從手牌移除
+//     const cardIndex = humanPlayer.hand.findIndex(c => c.id === card.id);
+//     humanPlayer.hand.splice(cardIndex, 1);
     
-    // 加到牌桌
-    sevensGame.table[card.suit].push(card);
-    sevensGame.table[card.suit].sort((a, b) => a.rank - b.rank);
+//     // 加到牌桌
+//     sevensGame.table[card.suit].push(card);
+//     sevensGame.table[card.suit].sort((a, b) => a.rank - b.rank);
     
-    // 檢查是否獲勝
-    if (humanPlayer.hand.length === 0) {
-        gameOver(humanPlayer);
-        return;
-    }
+//     // 檢查是否獲勝
+//     if (humanPlayer.hand.length === 0) {
+//         gameOver(humanPlayer);
+//         return;
+//     }
     
-    // 下一回合
-    nextTurn();
-}
+//     // 下一回合
+//     nextTurn();
+// }
 
-// 電腦回合
-function cpuTurn() {
-    const currentPlayer = sevensGame.players[sevensGame.currentPlayerIndex];
+// // 電腦回合
+// function cpuTurn() {
+//     const currentPlayer = sevensGame.players[sevensGame.currentPlayerIndex];
     
-    // 找出可出的牌
-    const playableCards = currentPlayer.hand.filter(card => isCardPlayable(card));
+//     // 找出可出的牌
+//     const playableCards = currentPlayer.hand.filter(card => isCardPlayable(card));
     
-    if (playableCards.length > 0) {
-        // 策略：優先打7，然後隨機選擇
-        let cardToPlay = playableCards.find(card => card.rank === 7);
-        if (!cardToPlay) {
-            cardToPlay = playableCards[Math.floor(Math.random() * playableCards.length)];
-        }
+//     if (playableCards.length > 0) {
+//         // 策略：優先打7，然後隨機選擇
+//         let cardToPlay = playableCards.find(card => card.rank === 7);
+//         if (!cardToPlay) {
+//             cardToPlay = playableCards[Math.floor(Math.random() * playableCards.length)];
+//         }
         
-        // 出牌
-        const cardIndex = currentPlayer.hand.findIndex(c => c.id === cardToPlay.id);
-        currentPlayer.hand.splice(cardIndex, 1);
+//         // 出牌
+//         const cardIndex = currentPlayer.hand.findIndex(c => c.id === cardToPlay.id);
+//         currentPlayer.hand.splice(cardIndex, 1);
         
-        sevensGame.table[cardToPlay.suit].push(cardToPlay);
-        sevensGame.table[cardToPlay.suit].sort((a, b) => a.rank - b.rank);
+//         sevensGame.table[cardToPlay.suit].push(cardToPlay);
+//         sevensGame.table[cardToPlay.suit].sort((a, b) => a.rank - b.rank);
         
-        // 動畫效果
-        renderGame();
+//         // 動畫效果
+//         renderGame();
         
-        // 檢查是否獲勝
-        if (currentPlayer.hand.length === 0) {
-            gameOver(currentPlayer);
-            return;
-        }
-    }
+//         // 檢查是否獲勝
+//         if (currentPlayer.hand.length === 0) {
+//             gameOver(currentPlayer);
+//             return;
+//         }
+//     }
     
-    // 下一回合
-    setTimeout(() => nextTurn(), 500);
-}
+//     // 下一回合
+//     setTimeout(() => nextTurn(), 500);
+// }
 
-// 下一回合
-function nextTurn() {
-    sevensGame.currentPlayerIndex = (sevensGame.currentPlayerIndex + 1) % sevensGame.players.length;
-    sevensGame.turnCount++;
+// // 下一回合
+// function nextTurn() {
+//     sevensGame.currentPlayerIndex = (sevensGame.currentPlayerIndex + 1) % sevensGame.players.length;
+//     sevensGame.turnCount++;
     
-    renderGame();
+//     renderGame();
     
-    // 如果是電腦，自動執行
-    if (!sevensGame.players[sevensGame.currentPlayerIndex].isHuman) {
-        setTimeout(() => cpuTurn(), 800);
-    }
-}
+//     // 如果是電腦，自動執行
+//     if (!sevensGame.players[sevensGame.currentPlayerIndex].isHuman) {
+//         setTimeout(() => cpuTurn(), 800);
+//     }
+// }
 
-// 更新遊戲資訊
-function updateGameInfo() {
-    document.getElementById('currentTurn').textContent = sevensGame.turnCount;
+// // 更新遊戲資訊
+// function updateGameInfo() {
+//     document.getElementById('currentTurn').textContent = sevensGame.turnCount;
     
-    const currentPlayer = sevensGame.players[sevensGame.currentPlayerIndex];
-    document.getElementById('currentPlayer').textContent = currentPlayer.isHuman ? currentPlayer.name : currentPlayer.displayName;
+//     const currentPlayer = sevensGame.players[sevensGame.currentPlayerIndex];
+//     document.getElementById('currentPlayer').textContent = currentPlayer.isHuman ? currentPlayer.name : currentPlayer.displayName;
     
-    const totalCards = sevensGame.players.reduce((sum, p) => sum + p.hand.length, 0);
-    document.getElementById('cardsLeft').textContent = totalCards;
-}
+//     const totalCards = sevensGame.players.reduce((sum, p) => sum + p.hand.length, 0);
+//     document.getElementById('cardsLeft').textContent = totalCards;
+// }
 
-// 遊戲結束
-function gameOver(winner) {
-    const messages = {
-        zh: winner.isHuman ? '🎉 恭喜你獲勝！' : `😢 ${winner.displayName} 獲勝了！`,
-        en: winner.isHuman ? '🎉 You Win!' : `😢 ${winner.displayName} Wins!`,
-        ja: winner.isHuman ? '🎉 あなたの勝ち！' : `😢 ${winner.displayName} の勝ち！`
-    };
+// // 遊戲結束
+// function gameOver(winner) {
+//     const messages = {
+//         zh: winner.isHuman ? '🎉 恭喜你獲勝！' : `😢 ${winner.displayName} 獲勝了！`,
+//         en: winner.isHuman ? '🎉 You Win!' : `😢 ${winner.displayName} Wins!`,
+//         ja: winner.isHuman ? '🎉 あなたの勝ち！' : `😢 ${winner.displayName} の勝ち！`
+//     };
     
-    showGameMessage(
-        winner.isHuman ? '🏆' : '🎮',
-        messages[currentLanguage],
-        currentLanguage === 'zh' ? '遊戲結束' : currentLanguage === 'en' ? 'Game Over' : 'ゲーム終了'
-    );
+//     showGameMessage(
+//         winner.isHuman ? '🏆' : '🎮',
+//         messages[currentLanguage],
+//         currentLanguage === 'zh' ? '遊戲結束' : currentLanguage === 'en' ? 'Game Over' : 'ゲーム終了'
+//     );
     
-    sevensGame.gameStarted = false;
-    renderGame();
-}
+//     sevensGame.gameStarted = false;
+//     renderGame();
+// }
 
-// 重新開始遊戲
-function restartSevensGame() {
-    initializeSevensGame();
-}
+// // 重新開始遊戲
+// function restartSevensGame() {
+//     initializeSevensGame();
+// }
 
-// 顯示遊戲訊息
-function showGameMessage(icon, text, subtext = '') {
-    const messageDiv = document.getElementById('gameMessage');
-    document.getElementById('messageIcon').textContent = icon;
-    document.getElementById('messageText').textContent = text;
-    document.getElementById('messageSubtext').textContent = subtext;
-    messageDiv.classList.add('show');
-}
+// // 顯示遊戲訊息
+// function showGameMessage(icon, text, subtext = '') {
+//     const messageDiv = document.getElementById('gameMessage');
+//     document.getElementById('messageIcon').textContent = icon;
+//     document.getElementById('messageText').textContent = text;
+//     document.getElementById('messageSubtext').textContent = subtext;
+//     messageDiv.classList.add('show');
+// }
 
-// 關閉遊戲訊息
-function closeGameMessage() {
-    document.getElementById('gameMessage').classList.remove('show');
-}
+// // 關閉遊戲訊息
+// function closeGameMessage() {
+//     document.getElementById('gameMessage').classList.remove('show');
+// }
 
-// 顯示遊戲規則
-function showGameRules() {
-    document.getElementById('rulesModal').classList.add('show');
-    document.body.style.overflow = 'hidden';
-}
+// // 顯示遊戲規則
+// function showGameRules() {
+//     document.getElementById('rulesModal').classList.add('show');
+//     document.body.style.overflow = 'hidden';
+// }
 
-// 關閉規則說明
-function closeRules() {
-    document.getElementById('rulesModal').classList.remove('show');
-    document.body.style.overflow = 'auto';
-}
+// // 關閉規則說明
+// function closeRules() {
+//     document.getElementById('rulesModal').classList.remove('show');
+//     document.body.style.overflow = 'auto';
+// }
 
-// 修改原本的 openGame 和 closeGame 函數
-function openGame() {
-    document.getElementById('gameModal').classList.add('show');
-    document.body.style.overflow = 'hidden';
+// // 修改原本的 openGame 和 closeGame 函數
+// function openGame() {
+//     document.getElementById('gameModal').classList.add('show');
+//     document.body.style.overflow = 'hidden';
     
-    // 重置到選單畫面
-    document.getElementById('gameMenu').style.display = 'grid';
-    document.getElementById('sevensGame').style.display = 'none';
-}
+//     // 重置到選單畫面
+//     document.getElementById('gameMenu').style.display = 'grid';
+//     document.getElementById('sevensGame').style.display = 'none';
+// }
 
-function closeGame() {
-    document.getElementById('gameModal').classList.remove('show');
-    document.body.style.overflow = 'auto';
+// function closeGame() {
+//     document.getElementById('gameModal').classList.remove('show');
+//     document.body.style.overflow = 'auto';
     
-    // 如果遊戲進行中，詢問是否確定離開
-    if (sevensGame.gameStarted) {
-        const messages = {
-            zh: '遊戲進行中，確定要離開嗎？',
-            en: 'Game in progress. Leave anyway?',
-            ja: 'ゲーム進行中。本当に終了しますか？'
-        };
+//     // 如果遊戲進行中，詢問是否確定離開
+//     if (sevensGame.gameStarted) {
+//         const messages = {
+//             zh: '遊戲進行中，確定要離開嗎？',
+//             en: 'Game in progress. Leave anyway?',
+//             ja: 'ゲーム進行中。本当に終了しますか？'
+//         };
         
-        if (!confirm(messages[currentLanguage])) {
-            document.getElementById('gameModal').classList.add('show');
-            document.body.style.overflow = 'hidden';
-            return;
-        }
-    }
-}
+//         if (!confirm(messages[currentLanguage])) {
+//             document.getElementById('gameModal').classList.add('show');
+//             document.body.style.overflow = 'hidden';
+//             return;
+//         }
+//     }
+// }
     </script>
 </body>
 </html>

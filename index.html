@@ -78,14 +78,6 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: "Microsoft JhengHei", "PingFang TC", "Helvetica Neue", Arial, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            transition: background 0.3s, color 0.3s;
-            line-height: 1.6;
-        }
-
         /* ========== 語言內容控制 ========== */
         .lang-content {
             display: none;
@@ -95,11 +87,6 @@
             display: inline;
         }
 
-        /* ========== 主容器 ========== */
-        .main-container {
-            min-height: 100vh;
-            padding: 20px;
-        }
 
         /* ========== 頂部橫幅 ========== */
         .header {
@@ -150,44 +137,6 @@
             backdrop-filter: blur(10px);
         }
 
-        /* ========== 語言切換器 ========== */
-        .language-switcher {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 8px;
-            border-radius: 25px;
-            backdrop-filter: blur(10px);
-        }
-
-        .lang-btn {
-            padding: 8px 16px;
-            border: 2px solid transparent;
-            border-radius: 20px;
-            background: transparent;
-            color: white;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .lang-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .lang-btn.active {
-            background: white;
-            color: var(--primary-color);
-        }
-
-        .theme-btn:hover {
-            transform: scale(1.1) rotate(20deg);
-            box-shadow: 0 6px 20px var(--shadow-heavy);
-        }
 
         /* ========== 左側按鈕群組 ========== */
         .side-buttons {
@@ -1055,9 +1004,6 @@
             display: none;
         }
         
-        .lang-content.active {
-            display: block;
-        }
     </style>
 <body>
     <!-- 主容器 -->
@@ -3999,49 +3945,6 @@
             setInterval(updateCountdown, 1000);
         }
 
-        // ========== 遊戲視窗功能 ==========
-        function openGame() {
-            document.getElementById('gameModal').classList.add('show');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeGame() {
-            document.getElementById('gameModal').classList.remove('show');
-            document.body.style.overflow = 'auto';
-        }       
-
-        function loadGame(mode) {
-            const gameContainer = document.getElementById('gameContainer');
-            const gameFrame = document.getElementById('gameFrame');
-            const gameModes = document.querySelector('.game-modes');
-            const playerStats = document.querySelector('.player-stats');
-            
-            gameModes.style.display = 'none';
-            playerStats.style.display = 'none';
-            gameContainer.style.display = 'block';
-            
-            setTimeout(() => {
-                const gameUrls = {
-                    quickplay: 'https://your-game-server.com/quickplay',
-                    custom: 'https://your-game-server.com/custom',
-                    tutorial: 'https://your-game-server.com/tutorial',
-                    ranked: 'https://your-game-server.com/ranked'
-                };
-                
-                gameFrame.src = gameUrls[mode] || '';
-                document.querySelector('.game-loading').style.display = 'none';
-                gameFrame.style.display = 'block';
-            }, 2000);
-        }
-
-        function backToLobby() {
-            document.querySelector('.game-modes').style.display = 'grid';
-            document.querySelector('.player-stats').style.display = 'grid';
-            document.getElementById('gameContainer').style.display = 'none';
-            document.getElementById('gameFrame').src = '';
-            document.querySelector('.game-loading').style.display = 'block';
-            document.getElementById('gameFrame').style.display = 'none';
-        }
 
         // ========== 分享功能 ==========
         function shareGame() {

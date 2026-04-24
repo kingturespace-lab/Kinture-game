@@ -142,7 +142,7 @@
         .side-buttons {
             position: fixed;
             left: 20px;
-            top: 12%;
+            top: 15%;
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
@@ -519,6 +519,7 @@
             line-height: 1.7;
             margin: 0;
             font-size: 14px;
+             white-space: pre-line; /* 加入此行讓 \n 換行符號生效 */
         }
 
     </style>
@@ -905,9 +906,9 @@
             </div>
             
             <h1><img src="icons/title.png" ...> KINTURE <span class="lang-content active" data-lang="zh">勤能轉運</span><span class="lang-content" data-lang="en">勤能轉運</span><span class="lang-content" data-lang="ja">勤能轉運</span></h1>
-            <div class="subtitle lang-content active" data-lang="zh">出牌改命 - 桌上遊戲說明書</div>
-            <div class="subtitle lang-content" data-lang="en">出牌改命 - 桌上遊戲說明書</div>
-            <div class="subtitle lang-content" data-lang="ja">出牌改命 - 桌上遊戲說明書</div>
+            <div class="subtitle lang-content active" data-lang="zh">桌上遊戲說明書(手機請選用電腦版配置)</div>
+            <div class="subtitle lang-content" data-lang="en">Tabletop Game Manual (Use Desktop Layout on Mobile)</div>
+            <div class="subtitle lang-content" data-lang="ja">テーブルトップゲームマニュアル （モバイルはPC版レイアウト推奨）</div>
             
             <div class="game-info-box">
                 <div class="info-item">
@@ -1720,7 +1721,7 @@
                                 <td><strong><img src="icons/ai-robot-40.png" ...> <img src="icons/robot-40.png" ...> AI 機器人</strong></td>
                                 <td>
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
-                                    +2N Luck，之後移除，N = 場上的同色卡數量
+                                    +(NxN) Luck，之後移除，N = 場上的同色卡數量
                                 </td>
                             </tr>
                             <tr>
@@ -1876,7 +1877,7 @@
                                 <td><strong><img src="icons/ai-robot-40.png" ...> <img src="icons/robot-40.png" ...> AI Robot</strong></td>
                                 <td>
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
-                                    +2N Luck, then remove. N = number of same-colored cards on the field.
+                                    +(NxN) Luck, then remove. N = number of same-colored cards on the field.
                                 </td>
                             </tr>
                             <tr>
@@ -2032,7 +2033,7 @@
                                 <td><strong><img src="icons/ai-robot-40.png" ...> <img src="icons/robot-40.png" ...> AI機器人（AIロボット）</strong></td>
                                 <td>
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
-                                    +2N 運、N＝場にある同じ色のカードの数。その後、除外。
+                                    +(NxN) 運、N＝場にある同じ色のカードの数。その後、除外。
                                 </td>
                             </tr>
                             <tr>
@@ -3599,21 +3600,21 @@
         // ========== 全域變數 ==========
         let currentLanguage = 'zh';
         let currentTheme = localStorage.getItem('theme') || 'light';
-        let announcements = JSON.parse(localStorage.getItem('announcements')) || [
+        let announcements =  [
             {
                 id: 1,
                 category: 'update',
                 date: '2026-02-20',
                 pinned: true,
                 title: {
-                    zh: '小丑卡、祭司卡效果異動',
-                    en: 'Jester & Priestess Card Effect Changes',
-                    ja: '小丑（ジェスター）・祭司（プリーステス）カード効果変更'
+                    zh: '小丑卡、AI機器人卡效果異動',
+                    en: 'Jester & AI Robot Card Effect Changes',
+                    ja: '小丑（ジェスター）・AIロボット（AIロボ）カード効果変更'
                 },
                 content: {
-                    zh: '小丑卡:+N Luck，之後移除，N = 場上的角色總數量。祭司卡:同色卡牌不可被感化',
-                    en: 'Jester card: +N Luck, then remove. N = number of total characters on the field. Priestess card: same-colored cards cannot be converted.',
-                    ja: '小丑カード:+N ラック、その後除外。N＝場上のキャラクター総数。祭司カード:同色カードは感化できない。'
+                    zh: '\n\n小丑卡:+N Luck，之後移除，N = 場上的角色總數量。\n\nAI機器人卡: +(NxN) Luck，之後移除，N = 場上的同色卡數量',
+                    en: '\n\nJester card: +N Luck, then remove. N = number of total characters on the field. \n\nAI Robot card: +(NxN) Luck, then remove. N = number of same-colored cards on the field.',
+                    ja: '\n\n小丑カード:+N ラック、その後除外。N＝場上のキャラクター総数。\n\nAIロボットカード:+(NxN) ラック、その後除外。N＝場上の同色カード数'
                 }
             },
             {
@@ -3622,9 +3623,9 @@
                 date: '2026-02-20',
                 pinned: true,
                 title: {
-                    zh: '增加AI機器人和小丑卡的技能範例',
+                    zh: '增加AI機器人卡和小丑卡的技能範例',
                     en: 'Added Skill Examples for AI Robot and Jester Cards',
-                    ja: 'AIロボットとジェスター・カードのスキル例を追加'
+                    ja: 'AIロボット・カードとジェスター・カードのスキル例を追加'
                 },
                 content: {
                     zh: ' ',
@@ -3632,11 +3633,29 @@
                     ja: ' '
                 }
             },
+                        {
+                id: 3,
+                category: 'update',
+                date: '2026-02-20',
+                pinned: true,
+                title: {
+                    zh: '祭司卡、魔術師卡、詐欺師卡、戀人卡，效果異動',
+                    en: 'Priest, Magician, Swindler, and Lover Card Effect Changes',
+                    ja: '祭司（プリーステス））・魔術師（マジシャン）・詐欺師（カウントレス）・恋人（ラヴァー）カード効果変更'
+                },
+                content: {
+                    zh: '\n\n祭司卡，不可對同色角色使用技能，不可對相同角色使用技能。\n\n魔術師卡、詐欺師卡，不可對相同角色使用技能。\n\n戀人卡，不可對同性角色使用技，每1次配對從棄牌堆頂抽1張牌。',
+                    en: '\n\nPriest card: Cannot use skills on same-colored characters, cannot use skills on the same character.\n\nMagician, Swindler, and Lover cards: Cannot use skills on the same character.\n\nLover card: Cannot use skills on same-gender characters, draw one card from the top of the discard pile for each pairing.',
+                    ja: '\n\n祭司カード: 同色のキャラクターにはスキルを使用できない、同じキャラクターにはスキルを使用できない。\n\n魔法使いカード、詐欺師カード、恋人カード: 同じキャラクターにはスキルを使用できない。\n\n恋人カード: 同性のキャラクターにはスキルを使用できない、ペアリングごとに捨て札の山から1枚引く。'
+                }
+            },
 
         ];
 
         // ========== 初始化 ==========
         document.addEventListener('DOMContentLoaded', function() {
+            // ✅ 清除舊的 localStorage 快取（一次性操作）
+            localStorage.removeItem('announcements');
             // 載入主題
             document.documentElement.setAttribute('data-theme', currentTheme);
             updateThemeIcon();
@@ -3673,10 +3692,24 @@
 
         // ========== 公告欄功能 ==========
         function openAnnouncement() {
+            // 1. 每次開啟時強制重新渲染所有公告（顯示最新內容）
+            renderAnnouncements('all');
+            
+            // 2. 重置分類標籤狀態，將「全部」設為 active
+            const tabs = document.querySelectorAll('.announcement-tabs .tab-btn');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            if (tabs.length > 0) {
+                tabs[0].classList.add('active'); // 第一個按鈕是「全部」
+            }
+            
+            // 3. 啟動活動倒數計時（如果有活動公告）
+            startEventCountdown();
+            
+            // 4. 顯示彈窗並鎖定背景滾動
             document.getElementById('announcementModal').classList.add('show');
             document.body.style.overflow = 'hidden';
-            
         }
+
 
         function closeAnnouncement() {
             document.getElementById('announcementModal').classList.remove('show');

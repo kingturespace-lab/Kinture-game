@@ -906,9 +906,9 @@
             </div>
             
             <h1><img src="icons/title.png" ...> KINTURE <span class="lang-content active" data-lang="zh">勤能轉運</span><span class="lang-content" data-lang="en">勤能轉運</span><span class="lang-content" data-lang="ja">勤能轉運</span></h1>
-            <div class="subtitle lang-content active" data-lang="zh">桌上遊戲說明書(手機請選用電腦版配置)</div>
-            <div class="subtitle lang-content" data-lang="en">Tabletop Game Manual (Use Desktop Layout on Mobile)</div>
-            <div class="subtitle lang-content" data-lang="ja">テーブルトップゲームマニュアル （モバイルはPC版レイアウト推奨）</div>
+            <div class="subtitle lang-content active" data-lang="zh">桌遊說明書(手機網頁請設置成電腦版)</div>
+            <div class="subtitle lang-content" data-lang="en">Board Game Manual (Use Desktop Layout on Mobile)</div>
+            <div class="subtitle lang-content" data-lang="ja">ボードゲームマニュアル （モバイルはPC版レイアウト推奨）</div>
             
             <div class="game-info-box">
                 <div class="info-item">
@@ -1618,6 +1618,7 @@
                                 <li>事件線技能 <span class="skill-icon continuous"><img src="icons/icon-hourglass-40.png" ...></span><span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                      由觸發事件線玩家執行</li>
                                 <li>事件線技能順序：(A卡 → 貴族 → 平民 → 守衛 → 強盜 → P卡)</li>
+                                <li>1次性卡牌能力，技能效果若執行失敗，則不被移除</li>
                             </ul>
                         </div>
                         
@@ -1669,7 +1670,7 @@
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                     「感化」場上1張未感化角色為同色；祭司橫置於其背，該牌離場時祭司牌移除
                                     <div class="alert alert-warning" style="margin-top: 10px;">
-                                        ⚠️ 同色卡牌不可被感化
+                                        ⚠️ 不可對同色角色使用技能，不可對相同角色使用技能。
                                     </div>
                                 </td>
                             </tr>
@@ -1678,6 +1679,9 @@
                                 <td>
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                     「轉移」場上1張牌至魔術師位置執行技能，魔術師移除並 +2 Luck
+                                    <div class="alert alert-warning" style="margin-top: 10px;">
+                                        ⚠️ 不可對相同角色使用技能。
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1685,6 +1689,9 @@
                                 <td>
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                     「偽裝」成場上任意角色，並結算該角色技能後移除
+                                    <div class="alert alert-warning" style="margin-top: 10px;">
+                                        ⚠️ 不可對相同角色使用技能。
+                                    </div>
                                 </td>
                             </tr>
                         </table>
@@ -1738,7 +1745,7 @@
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                     「配對」場上的角色牌後雙方移除且各 +5 Luck，並從移除區抽 1 張卡牌
                                     <div class="alert alert-info" style="margin-top: 10px;">
-                                        💡 未執行技能，則不會移除
+                                        💡 不可對同性角色使用技，每1次配對從棄牌堆頂抽1張牌，棄牌堆無牌，則無法抽牌。
                                     </div>
                                 </td>
                             </tr>
@@ -1774,6 +1781,7 @@
                                 <li>Event Line Skill <span class="skill-icon continuous"><img src="icons/icon-hourglass-40.png" ...></span><span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                      are executed by the triggering player</li>
                                 <li>Event line order: (A-cards → Noble → Commoner → Guard → Bandit → P-cards)</li>
+                                <li>For one-time use card abilities, if the skill effect fails to execute, the card is not removed</li>
                             </ul>
                         </div>
                         
@@ -1825,7 +1833,7 @@
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                     "Convert" 1 unconverted card on the field to your color; place Priestess card horizontally behind it. If the converted card leaves play, remove the Priestess card as well.
                                     <div class="alert alert-warning" style="margin-top: 10px;">
-                                        ⚠️ 	Same-colored cards cannot be converted
+                                        ⚠️ 	Cannot use skills on same-colored characters, cannot use skills on the same character.
                                     </div>
                                 </td>
                             </tr>
@@ -1834,6 +1842,9 @@
                                 <td>
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                     "Transfer" 1 card on the field to the Magician’s position and activate its skill; then remove the Magician and gain +2 Luck.
+                                    <div class="alert alert-warning" style="margin-top: 10px;">
+                                        ⚠️ 	 cannot use skills on the same character.
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1841,6 +1852,9 @@
                                 <td>
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                     "Disguise" as any character card on the field, resolve that character's skill, then remove the Swindler.
+                                    <div class="alert alert-warning" style="margin-top: 10px;">
+                                        ⚠️ 	 cannot use skills on the same character.
+                                    </div>
                                 </td>
                             </tr>
                         </table>
@@ -1894,7 +1908,7 @@
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                     "Pair" with a character card on the field, then both are removed and each gains +5 Luck. Draw 1 card from the removal zone.
                                     <div class="alert alert-info" style="margin-top: 10px;">
-                                        💡 If Skill not executed, will not be removed
+                                        💡 Cannot use skills on same-gender characters, draw one card from the top of the discard pile for each pairing. If the discard pile is empty, drawing is not possible.
                                     </div>
                                 </td>
                             </tr>
@@ -1930,6 +1944,7 @@
                                 <li>事件線スキル <span class="skill-icon continuous"><img src="icons/icon-hourglass-40.png" ...></span><span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                      はトリガープレイヤーが実行</li>
                                 <li>事件線スキルの実行順序：(Aカード → 貴族 → 平民 → 守衛 → 盗賊 → Pカード)</li>
+                                <li>1回限りのカード能力は、スキル効果が実行に失敗した場合、カードは除外されない</li>
                             </ul>
                         </div>
                         
@@ -1981,7 +1996,7 @@
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                     「感化」場の未感化キャラ1枚を自分の色にする；祭司カードを横向きでその裏に置く。そのカードが場を離れたら、祭司も除外する。
                                     <div class="alert alert-warning" style="margin-top: 10px;">
-                                        ⚠️ 同色カードは感化できない
+                                        ⚠️ 同色カードは感化できない同色のキャラクターにはスキルを使用できない、同じキャラクターにはスキルを使用できない。
                                     </div>
                                 </td>
                             </tr>
@@ -1990,6 +2005,9 @@
                                 <td>
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                     「転移」場のカード1枚を魔術師の位置に移動し、そのカードのスキルを発動；その後、魔術師を除外し、+2運を得る。
+                                    <div class="alert alert-warning" style="margin-top: 10px;">
+                                        ⚠️ 同じキャラクターにはスキルを使用できない。
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1997,6 +2015,9 @@
                                 <td>
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                     「偽装」場のいずれかのキャラとしてふるまい、そのスキルを解決後、詐欺師を除外する。
+                                    <div class="alert alert-warning" style="margin-top: 10px;">
+                                        ⚠️ 同じキャラクターにはスキルを使用できない。
+                                    </div>
                                 </td>
                             </tr>
                         </table>
@@ -2050,7 +2071,7 @@
                                     <span class="skill-icon event"><img src="icons/icon-key-40.png" ...></span>
                                     「ペアリング」場のキャラカードと組にして両方除外、各+5運。さらに除外ゾーンからカード1枚を引く。
                                     <div class="alert alert-info" style="margin-top: 10px;">
-                                        💡 スキルが発動しなければ除外されない。
+                                        💡 同性のキャラクターにはスキルを使用できない、ペアリングごとに捨て札の山から1枚引く。捨て札が空の場合、引けない。
                                     </div>
                                 </td>
                             </tr>
@@ -3607,9 +3628,25 @@
                 date: '2026-02-20',
                 pinned: true,
                 title: {
-                    zh: '小丑卡、AI機器人卡效果異動\n\n增加AI機器人卡和小丑卡的技能範例',
-                    en: 'Jester & AI Robot Card Effect Changes\n\nAdded Skill Examples for AI Robot and Jester Cards',
-                    ja: '小丑（ジェスター）・AIロボット（AIロボ）カード効果変更\n\nAIロボット・カードとジェスター・カードのスキル例を追加'
+                    zh: '增加AI機器人卡和小丑卡的技能範例',
+                    en: 'Added Skill Examples for AI Robot and Jester Cards',
+                    ja: 'AIロボット・カードとジェスター・カードのスキル例を追加'
+                },
+                content: {
+                    zh: '\n\n',
+                    en: '\n\n',
+                    ja: '\n\n'
+                }
+            },
+            {
+                id: 2,
+                category: 'update',
+                date: '2026-02-20',
+                pinned: true,
+                title: {
+                    zh: '小丑卡、AI機器人卡效果異動',
+                    en: 'Jester & AI Robot Card Effect Changes',
+                    ja: '小丑（ジェスター）・AIロボット（AIロボ）カード効果変更'
                 },
                 content: {
                     zh: '\n\n小丑卡:+N Luck，之後移除，N = 場上的角色總數量。\n\nAI機器人卡: +(NxN) Luck，之後移除，N = 場上的同色卡數量',
@@ -3618,7 +3655,7 @@
                 }
             },
             {
-                id: 2,
+                id: 3,
                 category: 'update',
                 date: '2026-02-20',
                 pinned: true,
@@ -3634,7 +3671,7 @@
                 }
             },
                         {
-                id: 3,
+                id: 4,
                 category: 'update',
                 date: '2026-02-20',
                 pinned: true,
@@ -3644,7 +3681,7 @@
                     ja: '祭司（プリーステス））・魔術師（マジシャン）・詐欺師（カウントレス）・恋人（ラヴァー）カード効果変更'
                 },
                 content: {
-                    zh: '\n\n祭司卡，不可對同色角色使用技能，不可對相同角色使用技能。\n\n魔術師卡、詐欺師卡，不可對相同角色使用技能。\n\n戀人卡，不可對同性角色使用技，每1次配對從棄牌堆頂抽1張牌，棄牌堆無牌，則無法抽牌。',
+                    zh: '\n\n祭司卡，不可對同色角色使用技能，不可對相同角色使用技能。\n\n魔術師卡、詐欺師卡，不可對相同角色使用技能。\n\n戀人卡，不可對同性角色使用技能，每1次配對從棄牌堆頂抽1張牌，棄牌堆無牌，則無法抽牌。',
                     en: '\n\nPriest card: Cannot use skills on same-colored characters, cannot use skills on the same character.\n\nMagician, Swindler, and Lover cards: Cannot use skills on the same character.\n\nLover card: Cannot use skills on same-gender characters, draw one card from the top of the discard pile for each pairing. If the discard pile is empty, drawing is not possible.',
                     ja: '\n\n祭司カード: 同色のキャラクターにはスキルを使用できない、同じキャラクターにはスキルを使用できない。\n\n魔法使いカード、詐欺師カード、恋人カード: 同じキャラクターにはスキルを使用できない。\n\n恋人カード: 同性のキャラクターにはスキルを使用できない、ペアリングごとに捨て札の山から1枚引く。捨て札が空の場合、引けない。'
                 }
